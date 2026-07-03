@@ -1,0 +1,23 @@
+body {
+  font-family: "Vazirmatn", Tahoma, sans-serif;
+}
+
+/* افکت خط طلایی زیر لینک‌ها هنگام هاور */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  height: 1.5px;
+  width: 0;
+  background-color: #C9A961;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
