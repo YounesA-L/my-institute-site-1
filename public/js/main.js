@@ -118,3 +118,25 @@ sliderWrapper.addEventListener("touchend", (e) => {
 
 updateSlider();
 startAutoplay();
+
+// ---------- باز/بسته کردن متن درباره آموزشگاه (موبایل) ----------
+const aboutToggleBtn = document.getElementById("about-toggle-btn");
+if (aboutToggleBtn) {
+    const aboutMoreText = document.getElementById("about-more-text");
+    const aboutToggleText = document.getElementById("about-toggle-text");
+    const aboutToggleIcon = document.getElementById("about-toggle-icon");
+
+    aboutToggleBtn.addEventListener("click", () => {
+        const isHidden = aboutMoreText.classList.contains("hidden");
+
+        if (isHidden) {
+            aboutMoreText.classList.remove("hidden");
+            aboutToggleText.textContent = "بستن";
+            aboutToggleIcon.classList.add("rotate-180");
+        } else {
+            aboutMoreText.classList.add("hidden");
+            aboutToggleText.textContent = "بیشتر بخوانید";
+            aboutToggleIcon.classList.remove("rotate-180");
+        }
+    });
+}
