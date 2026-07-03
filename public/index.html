@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>هدر - آموزشگاه رشدیه</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: "#1B3A5C",
+                        gold: "#C9A961",
+                        cream: "#FAF6EC",
+                    },
+                    fontFamily: {
+                        sans: ["Vazirmatn", "Tahoma", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <!-- فونت فارسی -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="/public/css/style.css" />
+</head>
+
+<body class="bg-cream text-navy antialiased">
+
+    <!-- ===================== هدر ===================== -->
+    <header class="w-full bg-cream border-b border-gold/30">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- سمت راست: نوار ناوبری (دسکتاپ) یا دکمه همبرگری (موبایل) -->
+                <div class="flex items-center">
+                    <!-- لینک‌های ناوبری - دسکتاپ -->
+                    <ul class="hidden sm:flex items-center gap-8">
+                        <li><a href="index.html"
+                                class="nav-link text-navy text-lg font-medium tracking-wide hover:text-gold transition-colors duration-200">خانه</a>
+                        </li>
+                        <li><a href="courses.html"
+                                class="nav-link text-navy text-lg font-medium tracking-wide hover:text-gold transition-colors duration-200">دوره‌ها</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="nav-link text-navy text-lg font-medium tracking-wide hover:text-gold transition-colors duration-200">تماس
+                                با ما</a></li>
+                    </ul>
+
+                    <!-- دکمه همبرگری - فقط موبایل -->
+                    <button id="menu-toggle" class="sm:hidden text-navy p-2 -mr-2" aria-label="باز کردن منو"
+                        aria-expanded="false">
+                        <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- سمت چپ: لوگو -->
+                <a href="index.html" class="inline-block shrink-0">
+                    <img src="/public/images/logo.png" alt="آموزشگاه رشدیه" class="h-12 sm:h-14 w-auto rounded-xl" />
+                </a>
+            </div>
+        </div>
+
+        <!-- منوی موبایل -->
+        <ul id="mobile-menu"
+            class="hidden sm:hidden flex-col items-center gap-1 pb-4 px-4 border-t border-gold/20 pt-3">
+            <li class="w-full text-center"><a href="index.html"
+                    class="block py-2.5 text-navy text-lg font-medium hover:text-gold transition-colors">خانه</a></li>
+            <li class="w-full text-center"><a href="courses.html"
+                    class="block py-2.5 text-navy text-lg font-medium hover:text-gold transition-colors">دوره‌ها</a>
+            </li>
+            <li class="w-full text-center"><a href="contact.html"
+                    class="block py-2.5 text-navy text-lg font-medium hover:text-gold transition-colors">تماس با ما</a>
+            </li>
+        </ul>
+    </header>
+    <!-- ===================== پایان هدر ===================== -->
+
+    <!-- ===================== اسلایدر تصاویر ===================== -->
+    <section class="w-full bg-navy relative">
+        <div id="hero-slider" dir="ltr" class="relative w-full h-[320px] sm:h-[420px] md:h-[520px] overflow-hidden">
+            <!-- ترک اسلایدها -->
+            <div id="slider-track" class="flex h-full transition-transform duration-700 ease-in-out">
+
+                <div class="slider-slide relative shrink-0 w-full h-full">
+                    <img src="/public/images/slide-1m.png" class="sm:hidden absolute inset-0 w-full h-full object-cover"
+                        alt="اسلاید ۱" draggable="false" />
+                    <img src="/public/images/slide-1.png"
+                        class="hidden sm:block absolute inset-0 w-full h-full object-cover" alt="اسلاید ۱"
+                        draggable="false" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/10 to-transparent"></div>
+                    <div class="absolute bottom-6 sm:bottom-10 right-6 sm:right-12 text-right" dir="rtl">
+                        <p class="text-gold text-xs sm:text-sm font-medium tracking-wide mb-1">آموزشگاه رشدیه</p>
+                        <h2 class="text-cream text-xl sm:text-3xl md:text-4xl font-bold">ثبت‌نام آغاز شد</h2>
+                    </div>
+                </div>
+
+                <div class="slider-slide relative shrink-0 w-full h-full">
+                    <img src="/public/images/slide-2m.png" class="sm:hidden absolute inset-0 w-full h-full object-cover"
+                        alt="اسلاید ۲" draggable="false" />
+                    <img src="/public/images/slide-2.png" class="w-full h-full object-cover" alt="اسلاید ۲"
+                        draggable="false" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/10 to-transparent"></div>
+                    <div class="absolute bottom-6 sm:bottom-10 right-6 sm:right-12 text-right" dir="rtl">
+                        <p class="text-gold text-xs sm:text-sm font-medium tracking-wide mb-1">کادر آموزشی</p>
+                        <h2 class="text-cream text-xl sm:text-3xl md:text-4xl font-bold">تدریس با اساتید مجرب و باتجربه
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="slider-slide relative shrink-0 w-full h-full">
+                    <img src="/public/images/slide-3m.png" class="sm:hidden absolute inset-0 w-full h-full object-cover"
+                        alt="اسلاید ۳" draggable="false" />
+                    <img src="/public/images/Slide-3.png" class="w-full h-full object-cover" alt="اسلاید ۳"
+                        draggable="false" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/10 to-transparent"></div>
+                    <div class="absolute bottom-6 sm:bottom-10 right-6 sm:right-12 text-right" dir="rtl">
+                        <p class="text-gold text-xs sm:text-sm font-medium tracking-wide mb-1">دوره‌ها</p>
+                        <h2 class="text-cream text-xl sm:text-3xl md:text-4xl font-bold">کلاس های امادگی نهایی
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="slider-slide relative shrink-0 w-full h-full">
+                    <img src="/public/images/slide-4m.png" class="sm:hidden absolute inset-0 w-full h-full object-cover"
+                        alt="اسلاید ۴" draggable="false" />
+                    <img src="/public/images/slide-4.png" class="w-full h-full object-cover" alt="اسلاید ۴"
+                        draggable="false" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/10 to-transparent"></div>
+                    <div class="absolute bottom-6 sm:bottom-10 right-6 sm:right-12 text-right" dir="rtl">
+                        <p class="text-gold text-xs sm:text-sm font-medium tracking-wide mb-1">مشاوره</p>
+                        <h2 class="text-cream text-xl sm:text-3xl md:text-4xl font-bold">مشاوره تحصیلی رایگان </h2>
+                    </div>
+                </div>
+
+                <div class="slider-slide relative shrink-0 w-full h-full">
+                    <img src="/public/images/slide-5m.png" class="sm:hidden absolute inset-0 w-full h-full object-cover"
+                        alt="اسلاید 5" draggable="false" />
+                    <img src="/public/images/slide-5.png" class="w-full h-full object-cover" alt="اسلاید 5"
+                        draggable="false" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/10 to-transparent"></div>
+                    <div class="absolute bottom-6 sm:bottom-10 right-6 sm:right-12 text-right" dir="rtl">
+                        <p class="text-gold text-xs sm:text-sm font-medium tracking-wide mb-1">دوره‌ها</p>
+                        <h2 class="text-cream text-xl sm:text-3xl md:text-4xl font-bold">کلاس های رفع اشکال مبحثی</h2>
+                    </div>
+                </div>
+
+                <div class="slider-slide relative shrink-0 w-full h-full">
+                    <img src="/public/images/slide-6m.png" class="sm:hidden absolute inset-0 w-full h-full object-cover"
+                        alt="اسلاید 6" draggable="false" />
+                    <img src="/public/images/slide-6.png" class="w-full h-full object-cover" alt="اسلاید 6"
+                        draggable="false" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/10 to-transparent"></div>
+                    <div class="absolute bottom-6 sm:bottom-10 right-6 sm:right-12 text-right" dir="rtl">
+                        <p class="text-gold text-xs sm:text-sm font-medium tracking-wide mb-1">دوره‌ها</p>
+                        <h2 class="text-cream text-xl sm:text-3xl md:text-4xl font-bold">ارائه دروس در تمامی مقاطع</h2>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- فلش قبلی -->
+            <button id="slider-prev" aria-label="اسلاید قبلی"
+                class="absolute top-1/2 -translate-y-1/2 left-3 sm:left-5 z-10 w-9 h-9 sm:w-11 sm:h-11 flex items-center justify-center rounded-full bg-navy/40 hover:bg-gold text-cream hover:text-navy transition-colors duration-200 backdrop-blur-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+
+            <!-- فلش بعدی -->
+            <button id="slider-next" aria-label="اسلاید بعدی"
+                class="absolute top-1/2 -translate-y-1/2 right-3 sm:right-5 z-10 w-9 h-9 sm:w-11 sm:h-11 flex items-center justify-center rounded-full bg-navy/40 hover:bg-gold text-cream hover:text-navy transition-colors duration-200 backdrop-blur-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+
+            <!-- نقطه‌های ناوبری -->
+            <div id="slider-dots" class="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2">
+            </div>
+        </div>
+    </section>
+    <!-- ===================== پایان اسلایدر ===================== -->
+
+    <!-- ===================== شعار سایت ===================== -->
+    <section class="w-full bg-cream py-10 sm:py-14">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-3 mb-4">
+                <span class="h-px w-10 sm:w-16 bg-gold/60"></span>
+                <span class="w-2 h-2 rounded-full bg-gold"></span>
+                <span class="h-px w-10 sm:w-16 bg-gold/60"></span>
+            </div>
+            <h2 class="text-navy text-xl sm:text-2xl md:text-3xl font-bold leading-relaxed">
+                فصل جدیدی برای یادگیری، فصل جدیدی برای آینده
+            </h2>
+        </div>
+    </section>
+    <!-- ===================== پایان شعار سایت ===================== -->
+
+    <!-- ===================== متوسطه دوم ===================== -->
+    <section class="w-full bg-cream py-8 sm:py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+            <!-- عنوان مقطع -->
+            <h3 class="text-navy text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-right">
+                متوسطه دوم
+            </h3>
+
+            <!-- کارت‌های پایه‌ها -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-6">
+
+                <!-- پایه دهم -->
+                <a href="#" class="group relative block aspect-square rounded-xl overflow-hidden shadow-md">
+                    <img src="/public/images/card-10.png" alt="پایه دهم"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/10 to-transparent"></div>
+                    <span class="absolute bottom-4 right-4 text-cream text-lg sm:text-xl font-bold">پایه دهم</span>
+                </a>
+
+                <!-- پایه یازدهم -->
+                <a href="#" class="group relative block aspect-square rounded-xl overflow-hidden shadow-md">
+                    <img src="/public/images/card-11.png" alt="پایه یازدهم"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/10 to-transparent"></div>
+                    <span class="absolute bottom-4 right-4 text-cream text-lg sm:text-xl font-bold">پایه یازدهم</span>
+                </a>
+
+                <!-- پایه دوازدهم -->
+                <a href="#" class="group relative block aspect-square rounded-xl overflow-hidden shadow-md">
+                    <img src="/public/images/card-12.png" alt="پایه دوازدهم"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/10 to-transparent"></div>
+                    <span class="absolute bottom-4 right-4 text-cream text-lg sm:text-xl font-bold">پایه دوازدهم</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+    <!-- ===================== پایان متوسطه دوم ===================== -->
+
+    <!-- ===================== متوسطه اول ===================== -->
+    <section class="w-full bg-cream py-8 sm:py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+            <!-- عنوان مقطع -->
+            <h3 class="text-navy text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-right">
+                متوسطه اول
+            </h3>
+
+            <!-- کارت‌های پایه‌ها -->
+            <div class="grid grid-cols-3 gap-3 sm:gap-6 place-items-center">
+
+                <!-- پایه هفتم -->
+                <a href="#" class="group flex flex-col items-center gap-2 sm:gap-3">
+                    <div
+                        class="relative w-24 h-24 sm:w-40 sm:h-40 rounded-full overflow-hidden shadow-md ring-2 ring-gold/40">
+                        <img src="/public/images/card-7.png" alt="پایه هفتم"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+                    <span class="text-navy text-sm sm:text-base font-semibold">پایه هفتم</span>
+                </a>
+
+                <!-- پایه هشتم -->
+                <a href="#" class="group flex flex-col items-center gap-2 sm:gap-3">
+                    <div
+                        class="relative w-24 h-24 sm:w-40 sm:h-40 rounded-full overflow-hidden shadow-md ring-2 ring-gold/40">
+                        <img src="/public/images/card-8.png" alt="پایه هشتم"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+                    <span class="text-navy text-sm sm:text-base font-semibold">پایه هشتم</span>
+                </a>
+
+                <!-- پایه نهم -->
+                <a href="#" class="group flex flex-col items-center gap-2 sm:gap-3">
+                    <div
+                        class="relative w-24 h-24 sm:w-40 sm:h-40 rounded-full overflow-hidden shadow-md ring-2 ring-gold/40">
+                        <img src="/public/images/card-9.png" alt="پایه نهم"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+                    <span class="text-navy text-sm sm:text-base font-semibold">پایه نهم</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+    <!-- ===================== پایان متوسطه اول ===================== -->
+
+    <!-- ===================== ابتدایی ===================== -->
+    <section class="w-full bg-cream py-8 sm:py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+            <!-- عنوان مقطع -->
+            <h3 class="text-navy text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-right">
+                ابتدایی
+            </h3>
+
+            <!-- بنر مستطیلی -->
+            <a href="#"
+                class="group block relative w-full max-w-3xl mx-auto aspect-[2/1] rounded-2xl overflow-hidden shadow-md">
+                <img src="/public/images/card-ebtedayee.png" alt="مقطع ابتدایی"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <div class="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/10 to-transparent"></div>
+                <span class="absolute bottom-5 right-6 text-cream text-lg sm:text-2xl font-bold">دوره‌های مقطع
+                    ابتدایی</span>
+            </a>
+
+        </div>
+    </section>
+    <!-- ===================== پایان ابتدایی ===================== -->
+
+    <script src="/public/js/main.js"></script>
+
+</body>
+
+</html>
