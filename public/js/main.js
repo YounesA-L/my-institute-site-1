@@ -126,6 +126,8 @@ if (aboutToggleBtn) {
     const aboutToggleText = document.getElementById("about-toggle-text");
     const aboutToggleIcon = document.getElementById("about-toggle-icon");
 
+    const aboutFade = document.getElementById("about-fade");
+
     aboutToggleBtn.addEventListener("click", () => {
         const isHidden = aboutMoreText.classList.contains("hidden");
 
@@ -133,10 +135,12 @@ if (aboutToggleBtn) {
             aboutMoreText.classList.remove("hidden");
             aboutToggleText.textContent = "بستن";
             aboutToggleIcon.classList.add("rotate-180");
+            aboutFade.classList.add("hidden");
         } else {
             aboutMoreText.classList.add("hidden");
             aboutToggleText.textContent = "بیشتر بخوانید";
             aboutToggleIcon.classList.remove("rotate-180");
+            aboutFade.classList.remove("hidden");
         }
     });
 }
