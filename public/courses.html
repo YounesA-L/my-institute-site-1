@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دوره‌ها - آموزشگاه رشدیه</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: "#1B3A5C",
+                        gold: "#C9A961",
+                        cream: "#FAF6EC",
+                    },
+                    fontFamily: {
+                        sans: ["Vazirmatn", "Tahoma", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <!-- فونت فارسی -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="/public/css/style.css" />
+</head>
+
+<body class="bg-cream text-navy antialiased">
+
+    <!-- ===================== هدر (دقیقاً مشابه صفحه اصلی) ===================== -->
+    <header class="w-full bg-cream border-b border-gold/30">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- سمت راست: نوار ناوبری (دسکتاپ) یا دکمه همبرگری (موبایل) -->
+                <div class="flex items-center">
+                    <!-- لینک‌های ناوبری - دسکتاپ -->
+                    <ul class="hidden sm:flex items-center gap-8">
+                        <li><a href="index.html"
+                                class="nav-link text-navy text-lg font-medium tracking-wide hover:text-gold transition-colors duration-200">خانه</a>
+                        </li>
+                        <li><a href="courses.html"
+                                class="nav-link active text-navy text-lg font-medium tracking-wide hover:text-gold transition-colors duration-200">دوره‌ها</a>
+                        </li>
+                        <li><a href="#about"
+                                class="nav-link text-navy text-lg font-medium tracking-wide hover:text-gold transition-colors duration-200">درباره
+                                ی ما</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="nav-link text-navy text-lg font-medium tracking-wide hover:text-gold transition-colors duration-200">تماس
+                                با ما</a></li>
+                    </ul>
+
+                    <!-- دکمه همبرگری - فقط موبایل -->
+                    <button id="menu-toggle" class="sm:hidden text-navy p-2 -mr-2" aria-label="باز کردن منو"
+                        aria-expanded="false">
+                        <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- سمت چپ: لوگو -->
+                <a href="index.html" class="inline-block shrink-0">
+                    <img src="/public/images/logo.png" alt="آموزشگاه رشدیه" class="h-12 sm:h-14 w-auto rounded-xl" />
+                </a>
+            </div>
+        </div>
+
+        <!-- منوی موبایل -->
+        <ul id="mobile-menu"
+            class="hidden sm:hidden flex-col items-center gap-1 pb-4 px-4 border-t border-gold/20 pt-3">
+            <li class="w-full text-center"><a href="index.html"
+                    class="block py-2.5 text-navy text-lg font-medium hover:text-gold transition-colors">خانه</a></li>
+            <li class="w-full text-center"><a href="courses.html"
+                    class="block py-2.5 text-gold text-lg font-bold transition-colors">دوره‌ها</a>
+            </li>
+            <li class="w-full text-center"><a href="#about"
+                    class="block py-2.5 text-navy text-lg font-medium hover:text-gold transition-colors">درباره ی ما</a>
+            </li>
+            <li class="w-full text-center"><a href="contact.html"
+                    class="block py-2.5 text-navy text-lg font-medium hover:text-gold transition-colors">تماس با ما</a>
+            </li>
+        </ul>
+    </header>
+    <!-- ===================== پایان هدر ===================== -->
+
+    <!-- ===================== محتوای اصلی صفحه دوره‌ها ===================== -->
+    <main class="w-full bg-cream py-12 sm:py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+            <!-- عنوان و توضیحات دوره‌ها -->
+            <div class="text-center mb-12">
+                <h1 class="text-navy text-3xl sm:text-4xl font-bold mb-4">دوره‌و کلاس های آموزشی رشدیه</h1>
+                <p class="text-navy/70 text-base sm:text-lg max-w-2xl mx-auto">
+                    تمامی دوره‌و کلاس ها توسط اساتید مجرب و با متدهای تخصصی برگزار می‌شوند.
+                </p>
+                <div class="flex items-center justify-center gap-3 mt-4">
+                    <span class="h-px w-16 bg-gold/60"></span>
+                    <span class="w-2 h-2 rounded-full bg-gold"></span>
+                    <span class="h-px w-16 bg-gold/60"></span>
+                </div>
+            </div>
+
+            <!-- ---------- نوار ناوبری داخلی بین مقاطع ---------- -->
+            <nav class="flex items-center justify-center gap-3 sm:gap-5 mb-12 sm:mb-16"
+                aria-label="ناوبری مقاطع تحصیلی">
+                <a href="#motavassete-do"
+                    class="text-navy text-sm sm:text-base font-semibold hover:text-gold transition-colors duration-200">دبیرستان</a>
+                <span class="h-px w-8 sm:w-12 bg-gradient-to-r from-transparent via-gold/70 to-transparent"></span>
+                <a href="#motavassete-aval"
+                    class="text-navy text-sm sm:text-base font-semibold hover:text-gold transition-colors duration-200">راهنمایی</a>
+                <span class="h-px w-8 sm:w-12 bg-gradient-to-r from-transparent via-gold/70 to-transparent"></span>
+                <a href="#ebtedayee"
+                    class="text-navy text-sm sm:text-base font-semibold hover:text-gold transition-colors duration-200">ابتدایی</a>
+            </nav>
+
+            <!-- ---------- بخش متوسطه دوم ---------- -->
+            <h2 id="motavassete-do" class="text-navy text-2xl font-bold mb-6 text-right">متوسطه دوم</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-14 place-items-center">
+
+                <!-- پایه دهم -->
+                <div class="group flex flex-col items-center w-40 sm:w-full sm:max-w-none mx-auto">
+                    <div
+                        class="w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-shadow duration-300">
+                        <img src="/public/images/card-10.png" alt="پایه دهم" loading="lazy"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+                    <div class="mt-4 text-center">
+                        <p class="text-navy/80 text-sm mb-3">دروس تخصصی و عمومی پایه دهم</p>
+                        <a href="#"
+                            class="inline-block bg-gold text-navy px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-navy hover:text-cream transition-colors shadow-sm">برای
+                            دیدن کلاس ها کلیک کنید</a>
+                    </div>
+                </div>
+
+                <!-- پایه یازدهم -->
+                <div class="group flex flex-col items-center w-40 sm:w-full sm:max-w-none mx-auto">
+                    <div
+                        class="w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-shadow duration-300">
+                        <img src="/public/images/card-11.png" alt="پایه یازدهم" loading="lazy"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+                    <div class="mt-4 text-center">
+                        <p class="text-navy/80 text-sm mb-3">دروس تخصصی و عمومی پایه یازدهم</p>
+                        <a href="#"
+                            class="inline-block bg-gold text-navy px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-navy hover:text-cream transition-colors shadow-sm">برای
+                            دیدن کلاس ها کلیک کنید</a>
+                    </div>
+                </div>
+
+                <!-- پایه دوازدهم -->
+                <div class="group flex flex-col items-center w-40 sm:w-full sm:max-w-none mx-auto">
+                    <div
+                        class="w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-shadow duration-300">
+                        <img src="/public/images/card-12.png" alt="پایه دوازدهم" loading="lazy"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+                    <div class="mt-4 text-center">
+                        <p class="text-navy/80 text-sm mb-3">دروس تخصصی و عمومی پایه دوازدهم</p>
+                        <a href="#"
+                            class="inline-block bg-gold text-navy px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-navy hover:text-cream transition-colors shadow-sm">برای
+                            دیدن کلاس ها کلیک کنید</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ---------- بخش متوسطه اول ---------- -->
+            <h2 id="motavassete-aval" class="text-navy text-2xl font-bold mb-6 text-right">متوسطه اول</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6 place-items-center mb-14">
+
+                <!-- پایه هفتم -->
+                <div class="group flex flex-col items-center">
+                    <div
+                        class="w-40 h-40 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden shadow-md ring-2 ring-gold/40 hover:shadow-2xl transition-shadow duration-300">
+                        <img src="/public/images/card-7.png" alt="پایه هفتم" loading="lazy"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+                    <div class="mt-4 text-center">
+                        <p class="text-navy/80 text-sm mb-3">دروس پایه هفتم متوسطه اول</p>
+                        <a href="#"
+                            class="inline-block bg-gold text-navy px-5 py-2 rounded-lg text-sm font-bold hover:bg-[#8FBC8F] hover:text-navy transition-colors duration-300 shadow-sm">مشاهده
+                            کلاس ها</a>
+                    </div>
+                </div>
+
+                <!-- پایه هشتم -->
+                <div class="group flex flex-col items-center">
+                    <div
+                        class="w-40 h-40 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden shadow-md ring-2 ring-gold/40 hover:shadow-2xl transition-shadow duration-300">
+                        <img src="/public/images/card-8.png" alt="پایه هشتم" loading="lazy"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+                    <div class="mt-4 text-center">
+                        <p class="text-navy/80 text-sm mb-3">دروس پایه هشتم متوسطه اول</p>
+                        <a href="#"
+                            class="inline-block bg-gold text-navy px-5 py-2 rounded-lg text-sm font-bold hover:bg-[#40E0D0] hover:text-navy transition-colors duration-300 shadow-sm">مشاهده
+                            کلاس ها</a>
+                    </div>
+                </div>
+
+                <!-- پایه نهم -->
+                <div class="group flex flex-col items-center">
+                    <div
+                        class="w-40 h-40 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden shadow-md ring-2 ring-gold/40 hover:shadow-2xl transition-shadow duration-300">
+                        <img src="/public/images/card-9.png" alt="پایه نهم" loading="lazy"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+                    <div class="mt-4 text-center">
+                        <p class="text-navy/80 text-sm mb-3">دروس پایه نهم متوسطه اول</p>
+                        <a href="#"
+                            class="inline-block bg-gold text-navy px-5 py-2 rounded-lg text-sm font-bold hover:bg-gradient-to-r hover:from-[#40E0D0] hover:to-[#98FF98] hover:text-navy transition-all duration-300 shadow-sm">مشاهده
+                            کلاس ها</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ---------- بخش ابتدایی ---------- -->
+            <h2 id="ebtedayee" class="text-navy text-2xl font-bold mb-6 text-right">ابتدایی</h2>
+            <div class="flex justify-center mb-14">
+                <div class="group flex flex-col items-center w-full max-w-3xl">
+                    <div
+                        class="w-full aspect-[2/1] rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-shadow duration-300">
+                        <img src="/public/images/card-ebtedayee.png" alt="دوره ابتدایی" loading="lazy"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+                    <div class="mt-4 text-center">
+                        <p class="text-navy/80 text-sm mb-3">آموزش پایه‌های اول تا ششم با متدهای اختصاصی رشدیه</p>
+                        <a href="#"
+                            class="inline-block bg-gold text-navy px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-gradient-to-l hover:from-[#40E0D0] hover:via-[#98FF98] hover:to-[#FFB88C] hover:text-navy transition-all duration-300 shadow-sm">مشاهده
+                            جزئیات</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!-- ===================== پایان محتوای اصلی ===================== -->
+
+    <!-- ===================== فوتر (دقیقاً مشابه صفحه اصلی) ===================== -->
+    <footer class="w-full bg-navy pt-10 sm:pt-14 pb-6">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6 text-center sm:text-right">
+
+                <!-- ستون معرفی -->
+                <div>
+                    <img src="/public/images/logo-footer.png" alt="آموزشگاه رشدیه" loading="lazy"
+                        class="h-12 w-auto mx-auto sm:mx-0 rounded-xl mb-4" />
+                    <p class="text-cream/70 text-sm leading-6 mb-5">
+                        رشدیه؛ بیش از یک و نیم دهه همراه یادگیری دانش‌آموزان ؛ با سابقه ی یک عمر تجربه
+                    </p>
+
+                    <!-- شبکه‌های اجتماعی -->
+                    <div class="flex items-center justify-center sm:justify-start gap-3">
+
+                        <!-- اینستاگرام -->
+
+                        <a href="#" aria-label="اینستاگرام" class="w-9 h-9 flex items-center justify-center rounded-full bg-cream/10 hover:bg-gold
+                        text-cream hover:text-navy transition-colors duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+
+                        <!-- تلگرام -->
+
+                        <a href="#" aria-label="تلگرام" class="w-9 h-9 flex items-center justify-center rounded-full bg-cream/10 hover:bg-gold
+                        text-cream hover:text-navy transition-colors duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M21.05 3.64L2.53 10.77c-1.27.5-1.26 1.2-.23 1.51l4.76 1.48 1.85 5.62c.22.6.37.83.75.83.38 0 .55-.17.76-.38l1.83-1.78 4.83 3.56c.9.5 1.55.24 1.77-.83l3.2-15.1c.32-1.31-.5-1.9-1.02-1.66z">
+                                </path>
+                            </svg>
+                        </a>
+
+                    </div>
+
+                    <!-- ایمیل -->
+                    <div class="flex items-center justify-center sm:justify-start gap-2 mt-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gold shrink-0" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        <a href="mailto:info@rashdiyeh.ir" dir="ltr"
+                            class="text-cream/80 text-sm hover:text-gold transition-colors duration-200">
+                            info@rashdiyeh.ir
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ستون لینک‌های سریع -->
+                <div>
+                    <h4 class="text-gold text-base font-bold mb-4">دسترسی سریع</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="index.html"
+                                class="text-cream/80 text-sm hover:text-gold transition-colors duration-200">خانه</a>
+                        </li>
+                        <li><a href="courses.html"
+                                class="text-cream/80 text-sm hover:text-gold transition-colors duration-200">دوره‌ها</a>
+                        </li>
+                        <li><a href="#about"
+                                class="text-cream/80 text-sm hover:text-gold transition-colors duration-200">درباره
+                                ما</a></li>
+                        <li><a href="contact.html"
+                                class="text-cream/80 text-sm hover:text-gold transition-colors duration-200">تماس با
+                                ما</a></li>
+                    </ul>
+                </div>
+
+                <!-- ستون اطلاعات تماس -->
+                <div>
+                    <h4 class="text-gold text-base font-bold mb-4">اطلاعات تماس</h4>
+                    <ul class="space-y-2.5 text-cream/80 text-sm">
+                        <li>تهران ,نازی اباد میدان بازار دوم خیابان احمد بابایی خیابان نیکنام کوچه کریمی پلاک 9</li>
+                        <li dir="ltr" class="text-right">025-00000000</li>
+                        <li dir="ltr" class="text-right">0912-0000000</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- خط جداکننده -->
+            <div class="border-t border-cream/10 mt-10 pt-5">
+                <p class="text-cream/50 text-xs text-center">
+                    © ۱۴۰۵ آموزشگاه رشدیه. تمامی حقوق محفوظ است.
+                </p>
+            </div>
+
+            <p class="text-cream/40 text-xs text-center" dir="ltr">
+                Designed & Developed by
+                <a href="https://github.com/YounesA-L" target="_blank"
+                    class="text-gold/70 hover:text-gold transition-colors duration-200 font-medium">Younes A.L</a>
+            </p>
+
+        </div>
+    </footer>
+    <!-- ===================== پایان فوتر ===================== -->
+
+    <script src="/public/js/main.js"></script>
+
+</body>
+
+</html>

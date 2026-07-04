@@ -25,3 +25,12 @@ body {
 .nav-link:hover::after {
   width: 100%;
 }
+
+/* حالت فعال لینک ناوبری (صفحه‌ی جاری) */
+.nav-link.active {
+  color: #C9A961;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
