@@ -80,6 +80,7 @@ function prevSlide() {
 }
 
 function startAutoplay() {
+    clearInterval(autoplayInterval);
     autoplayInterval = setInterval(nextSlide, AUTOPLAY_DELAY);
 }
 
