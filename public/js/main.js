@@ -148,3 +148,30 @@ if (aboutToggleBtn) {
         }
     });
 }
+
+// ---------- آکاردئون کارت‌های درس (صفحات جزئیات پایه‌ها) ----------
+document.querySelectorAll(".toggle-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const parent = btn.closest(".course-item");
+        if (!parent) return;
+        parent.classList.toggle("open");
+        const span = btn.querySelector("span");
+        if (span) {
+            span.textContent = parent.classList.contains("open") ? "بستن جزئیات" : "مشاهده جزئیات";
+        }
+    });
+});
+
+// ---------- هایلایت ناوبری داخلی (دروس تخصصی/عمومی) ----------
+const inPageNavLinks = document.querySelectorAll(".in-page-nav a");
+inPageNavLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        inPageNavLinks.forEach((a) => {
+            a.classList.remove("border-gold", "text-gold");
+            a.classList.add("border-transparent", "text-navy");
+        });
+        link.classList.remove("border-transparent", "text-navy");
+        link.classList.add("border-gold", "text-gold");
+    });
+});

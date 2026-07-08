@@ -34,3 +34,40 @@ body {
 .nav-link.active::after {
   width: 100%;
 }
+
+/* ---------- صفحات جزئیات دوره (کارت ثابت + آکاردئون) ---------- */
+
+
+.course-item .details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.course-item.open .details {
+  max-height: 800px;
+  opacity: 1;
+}
+
+.course-item .toggle-icon {
+  transition: transform 0.3s ease;
+}
+
+.course-item.open .toggle-icon {
+  transform: rotate(180deg);
+}
+
+@media (min-width:1024px) {
+
+  .sticky-card {
+
+    position: sticky;
+
+    top: 32px;
+
+    align-self: flex-start;
+
+  }
+
+}
