@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دوره‌های پایه یازدهم | آموزشگاه رشدیه</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: "#1B3A5C",
+                        gold: "#C9A961",
+                        cream: "#FAF6EC",
+                    },
+                    fontFamily: {
+                        sans: ["Vazirmatn", "Tahoma", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <!-- فونت فارسی -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-cream text-navy antialiased">
+
+    <!-- ===================== هدر (دقیقاً مشابه بقیه صفحات) ===================== -->
+    <header class="w-full bg-cream border-b border-gold/30">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between h-20">
+
+                <div class="flex items-center">
+                    <ul class="hidden sm:flex items-center gap-8">
+                        <li><a href="index.html"
+                                class="nav-link text-navy text-lg font-medium tracking-wide hover:text-gold transition-colors duration-200">خانه</a>
+                        </li>
+                        <li><a href="courses.html"
+                                class="nav-link active text-gold text-lg font-bold tracking-wide">دوره‌ها</a></li>
+                        <li><a href="about-us.html"
+                                class="nav-link text-navy text-lg font-medium tracking-wide hover:text-gold transition-colors duration-200">درباره‌ی
+                                ما</a></li>
+                        <li><a href="contact.html"
+                                class="nav-link text-navy text-lg font-medium tracking-wide hover:text-gold transition-colors duration-200">تماس
+                                با ما</a></li>
+                    </ul>
+
+                    <button id="menu-toggle" class="sm:hidden text-navy p-2 -mr-2" aria-label="باز کردن منو"
+                        aria-expanded="false">
+                        <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <a href="index.html" class="inline-block shrink-0">
+                    <img src="images/logo.png" alt="آموزشگاه رشدیه" class="h-12 sm:h-14 w-auto rounded-xl" />
+                </a>
+            </div>
+        </div>
+
+        <ul id="mobile-menu"
+            class="hidden sm:hidden flex-col items-center gap-1 pb-4 px-4 border-t border-gold/20 pt-3">
+            <li class="w-full text-center"><a href="index.html"
+                    class="block py-2.5 text-navy text-lg font-medium hover:text-gold transition-colors">خانه</a></li>
+            <li class="w-full text-center"><a href="courses.html"
+                    class="block py-2.5 text-gold text-lg font-bold transition-colors">دوره‌ها</a>
+            </li>
+            <li class="w-full text-center"><a href="about-us.html"
+                    class="block py-2.5 text-navy text-lg font-medium hover:text-gold transition-colors">درباره‌ی
+                    ما</a></li>
+            <li class="w-full text-center"><a href="contact.html"
+                    class="block py-2.5 text-navy text-lg font-medium hover:text-gold transition-colors">تماس با ما</a>
+            </li>
+        </ul>
+    </header>
+    <!-- ===================== پایان هدر ===================== -->
+
+
+    <!-- ===================== محتوای اصلی: جزئیات دوره‌های پایه یازدهم ===================== -->
+    <main class="w-full bg-cream py-8 sm:py-12 lg:py-16 relative">
+
+        <!-- لایه‌ی جدا برای کلیپ کردن شکل‌های تزئینی (بدون تأثیر روی sticky) -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+
+            <!-- شکل‌های هندسی تزئینی -->
+            <div class="absolute -top-16 right-[8%] w-52 h-52 rounded-full bg-navy/[0.06] pointer-events-none"
+                aria-hidden="true"></div>
+            <div class="absolute top-1/3 -left-10 w-32 h-32 rounded-2xl bg-gold/[0.12] rotate-12 pointer-events-none"
+                aria-hidden="true"></div>
+            <div class="absolute bottom-10 left-[6%] w-20 h-20 rounded-full border-2 border-gold/20 pointer-events-none"
+                aria-hidden="true"></div>
+            <div class="absolute -bottom-10 right-[10%] w-36 h-36 rounded-xl bg-navy/[0.05] -rotate-6 pointer-events-none"
+                aria-hidden="true"></div>
+            <div class="hidden sm:block absolute top-1/2 right-[3%] w-16 h-16 rounded-full border-2 border-gold/25 pointer-events-none"
+                aria-hidden="true"></div>
+            <div class="absolute top-[55%] left-[4%] w-24 h-24 rounded-2xl bg-navy/[0.05] rotate-45 pointer-events-none"
+                aria-hidden="true"></div>
+            <div class="hidden sm:block absolute top-[68%] right-[16%] w-28 h-28 rounded-full bg-gold/[0.08] pointer-events-none"
+                aria-hidden="true"></div>
+            <div class="hidden sm:block absolute top-[22%] left-[2%] w-20 h-20 rounded-xl border-2 border-navy/10 rotate-12 pointer-events-none"
+                aria-hidden="true"></div>
+            <div class="absolute top-[28%] right-[2%] w-24 h-24 rounded-full bg-gold/[0.07] pointer-events-none"
+                aria-hidden="true"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+
+            <!-- مسیر بازگشت + عنوان (فقط موبایل/تبلت، چون در دسکتاپ داخل کارت ثابت دیده می‌شود) -->
+            <div class="lg:hidden text-center mb-8">
+                <a href="courses.html"
+                    class="inline-flex items-center gap-1 text-navy/60 text-sm hover:text-gold transition-colors mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    بازگشت به دوره‌ها
+                </a>
+                <h1 class="text-navy text-2xl sm:text-3xl font-bold">پایه یازدهم</h1>
+                <p class="text-navy/70 text-sm sm:text-base mt-2">دروس تخصصی و عمومی با رویکرد کنکور و تقویت بنیه
+                    علمی
+                </p>
+            </div>
+
+            <!-- جداکننده تزئینی بین هدر و ناوبری داخلی (فقط دسکتاپ) -->
+            <div class="hidden lg:flex items-center justify-center gap-3 mb-10">
+                <span class="h-px w-16 bg-gold/60"></span>
+                <span class="w-2 h-2 rounded-full bg-gold"></span>
+                <span class="h-px w-16 bg-gold/60"></span>
+            </div>
+
+            <!-- دو ستون: دروس (راست) + کارت معرفی ثابت (چپ) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
+
+                <!-- ===== ستون راست: فهرست دروس ===== -->
+                <div class="lg:col-span-8 lg:order-1">
+
+                    <!-- نوار ناوبری داخلی (دقیقاً به سبک courses.html) -->
+                    <nav class="flex items-center justify-between gap-4 mb-8 border-b border-gold/30 pb-3 flex-wrap"
+                        aria-label="ناوبری دروس">
+                        <div class="in-page-nav flex items-center gap-6">
+                            <a href="#takhasosi"
+                                class="text-sm sm:text-base font-semibold pb-2 border-b-2 border-gold text-gold transition-colors duration-200">دروس
+                                تخصصی</a>
+                            <a href="#omomi"
+                                class="text-sm sm:text-base font-semibold pb-2 border-b-2 border-transparent text-navy hover:text-gold hover:border-gold transition-colors duration-200">دروس
+                                عمومی</a>
+                        </div>
+                        <a href="#quick-action"
+                            class="inline-flex items-center gap-1.5 bg-gold text-navy text-sm font-bold px-4 py-2 rounded-full hover:bg-navy hover:text-cream transition-colors duration-200 shadow-sm shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            رزرو کلاس
+                        </a>
+                    </nav>
+
+                    <!-- ===== دروس تخصصی ===== -->
+                    <div id="takhasosi" class="mb-12 relative overflow-hidden">
+
+                        <!-- شکل‌های تزئینی پشت کارت‌های دروس تخصصی -->
+                        <div class="absolute top-6 left-[8%] w-24 h-24 rounded-full bg-gold/[0.10] -z-10 pointer-events-none"
+                            aria-hidden="true"></div>
+                        <div class="absolute top-1/2 right-[2%] w-20 h-20 rounded-2xl bg-navy/[0.06] rotate-12 -z-10 pointer-events-none"
+                            aria-hidden="true"></div>
+                        <div class="absolute bottom-4 left-[20%] w-16 h-16 rounded-full border-2 border-gold/20 -z-10 pointer-events-none"
+                            aria-hidden="true"></div>
+
+                        <!-- کارت درس حسابان -->
+                        <div
+                            class="course-item bg-gradient-to-b from-white to-gold/25 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 mb-6 overflow-hidden border border-gold/10">
+                            <div class="flex items-stretch">
+                                <div class="flex-1 p-4 sm:p-5 flex flex-col justify-between">
+                                    <div>
+                                        <h4 class="text-navy text-lg font-bold">حسابان</h4>
+                                        <p class="text-navy/60 text-xs mt-1">رشته: ریاضی و فیزیک</p>
+                                    </div>
+                                    <button
+                                        class="toggle-btn self-start mt-3 inline-flex items-center gap-1 text-gold text-sm font-semibold hover:underline">
+                                        <span>مشاهده جزئیات</span>
+                                        <svg class="toggle-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="w-1/3 sm:w-1/4 flex-shrink-0 flex items-center p-3 sm:p-4">
+                                    <img src="images/courses-card-11-hesaban.png" alt="حسابان"
+                                        class="w-full aspect-square object-cover rounded-xl" />
+                                </div>
+                            </div>
+                            <div class="details px-4 sm:px-5 pb-5">
+                                <div class="border-t border-gold/20 pt-4 mt-2">
+                                    <h5 class="text-navy font-semibold mb-3">دوره‌ها و کلاس‌های ارائه شده:</h5>
+                                    <ul class="space-y-2 text-sm text-navy/80">
+                                        <li class="border-b border-gold/10 pb-2">کلاس‌های سالیانه</li>
+                                        <li class="border-b border-gold/10 pb-2">کلاس‌های رفع اشکال مبحثی</li>
+                                        <li>کلاس‌های تقویتی</li>
+                                    </ul>
+                                    <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
+                                        <span
+                                            class="inline-block bg-cream text-navy/60 text-xs px-3 py-1 rounded-full">حضوری
+                                            / آنلاین</span>
+                                        <a href="#quick-action"
+                                            class="inline-flex items-center gap-1.5 text-gold text-xs sm:text-sm font-bold hover:underline">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                            </svg>
+                                            تماس برای رزرو
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- کارت درس ریاضی -->
+                        <div
+                            class="course-item bg-gradient-to-b from-white to-gold/25 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 mb-6 overflow-hidden border border-gold/10">
+                            <div class="flex items-stretch">
+                                <div class="flex-1 p-4 sm:p-5 flex flex-col justify-between">
+                                    <div>
+                                        <h4 class="text-navy text-lg font-bold">ریاضی</h4>
+                                        <p class="text-navy/60 text-xs mt-1">رشته: علوم تجربی</p>
+                                    </div>
+                                    <button
+                                        class="toggle-btn self-start mt-3 inline-flex items-center gap-1 text-gold text-sm font-semibold hover:underline">
+                                        <span>مشاهده جزئیات</span>
+                                        <svg class="toggle-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="w-1/3 sm:w-1/4 flex-shrink-0 flex items-center p-3 sm:p-4">
+                                    <img src="images/courses-card-11-math.png" alt="ریاضی"
+                                        class="w-full aspect-square object-cover rounded-xl" />
+                                </div>
+                            </div>
+                            <div class="details px-4 sm:px-5 pb-5">
+                                <div class="border-t border-gold/20 pt-4 mt-2">
+                                    <h5 class="text-navy font-semibold mb-3">دوره‌ها و کلاس‌های ارائه شده:</h5>
+                                    <ul class="space-y-2 text-sm text-navy/80">
+                                        <li class="border-b border-gold/10 pb-2">کلاس‌های سالیانه</li>
+                                        <li class="border-b border-gold/10 pb-2">کلاس‌های رفع اشکال مبحثی</li>
+                                        <li>کلاس‌های تقویتی</li>
+                                    </ul>
+                                    <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
+                                        <span
+                                            class="inline-block bg-cream text-navy/60 text-xs px-3 py-1 rounded-full">حضوری
+                                            / آنلاین</span>
+                                        <a href="#quick-action"
+                                            class="inline-flex items-center gap-1.5 text-gold text-xs sm:text-sm font-bold hover:underline">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                            </svg>
+                                            تماس برای رزرو
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- کارت هندسه -->
+                        <div
+                            class="course-item bg-gradient-to-b from-white to-gold/25 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 mb-6 overflow-hidden border border-gold/10">
+                            <div class="flex items-stretch">
+                                <div class="flex-1 p-4 sm:p-5 flex flex-col justify-between">
+                                    <div>
+                                        <h4 class="text-navy text-lg font-bold">هندسه</h4>
+                                        <p class="text-navy/60 text-xs mt-1">رشته: ریاضی و فیزیک</p>
+                                    </div>
+                                    <button
+                                        class="toggle-btn self-start mt-3 inline-flex items-center gap-1 text-gold text-sm font-semibold hover:underline">
+                                        <span>مشاهده جزئیات</span>
+                                        <svg class="toggle-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="w-1/3 sm:w-1/4 flex-shrink-0 flex items-center p-3 sm:p-4">
+                                    <img src="images/courses-card-11-geometry.png" alt="هندسه"
+                                        class="w-full aspect-square object-cover rounded-xl" />
+                                </div>
+                            </div>
+                            <div class="details px-4 sm:px-5 pb-5">
+                                <div class="border-t border-gold/20 pt-4 mt-2">
+                                    <h5 class="text-navy font-semibold mb-3">دوره‌ها و کلاس‌های ارائه شده:</h5>
+                                    <ul class="space-y-2 text-sm text-navy/80">
+                                        <li class="border-b border-gold/10 pb-2">کلاس‌های سالیانه</li>
+                                        <li class="border-b border-gold/10 pb-2">کلاس‌های رفع اشکال مبحثی</li>
+                                        <li>کلاس‌های تقویتی</li>
+                                    </ul>
+                                    <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
+                                        <span
+                                            class="inline-block bg-cream text-navy/60 text-xs px-3 py-1 rounded-full">حضوری
+                                            / آنلاین</span>
+                                        <a href="#quick-action"
+                                            class="inline-flex items-center gap-1.5 text-gold text-xs sm:text-sm font-bold hover:underline">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                            </svg>
+                                            تماس برای رزرو
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- کارت آمار و احتمال -->
+                        <div
+                            class="course-item bg-gradient-to-b from-white to-gold/25 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 mb-6 overflow-hidden border border-gold/10">
+                            <div class="flex items-stretch">
+                                <div class="flex-1 p-4 sm:p-5 flex flex-col justify-between">
+                                    <div>
+                                        <h4 class="text-navy text-lg font-bold">آمار و احتمال</h4>
+                                        <p class="text-navy/60 text-xs mt-1">رشته: ریاضی و فیزیک</p>
+                                    </div>
+                                    <button
+                                        class="toggle-btn self-start mt-3 inline-flex items-center gap-1 text-gold text-sm font-semibold hover:underline">
+                                        <span>مشاهده جزئیات</span>
+                                        <svg class="toggle-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="w-1/3 sm:w-1/4 flex-shrink-0 flex items-center p-3 sm:p-4">
+                                    <img src="images/courses-card-11-amar.png" alt="آمار و احتمال"
+                                        class="w-full aspect-square object-cover rounded-xl" />
+                                </div>
+                            </div>
+                            <div class="details px-4 sm:px-5 pb-5">
+                                <div class="border-t border-gold/20 pt-4 mt-2">
+                                    <h5 class="text-navy font-semibold mb-3">دوره‌ها و کلاس‌های ارائه شده:</h5>
+                                    <ul class="space-y-2 text-sm text-navy/80">
+                                        <li class="border-b border-gold/10 pb-2">کلاس‌های سالیانه</li>
+                                        <li class="border-b border-gold/10 pb-2">کلاس‌های رفع اشکال مبحثی</li>
+                                        <li>کلاس‌های تقویتی</li>
+                                    </ul>
+                                    <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
+                                        <span
+                                            class="inline-block bg-cream text-navy/60 text-xs px-3 py-1 rounded-full">حضوری
+                                            / آنلاین</span>
+                                        <a href="#quick-action"
+                                            class="inline-flex items-center gap-1.5 text-gold text-xs sm:text-sm font-bold hover:underline">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                            </svg>
+                                            تماس برای رزرو
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- کارت فیزیک -->
+                        <div
+                            class="course-item bg-gradient-to-b from-white to-gold/25 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 mb-6 overflow-hidden border border-gold/10">
+                            <div class="flex items-stretch">
+                                <div class="flex-1 p-4 sm:p-5 flex flex-col justify-between">
+                                    <div>
+                                        <h4 class="text-navy text-lg font-bold">فیزیک</h4>
+                                        <p class="text-navy/60 text-xs mt-1">رشته‌های: ریاضی و فیزیک، علوم تجربی</p>
+                                    </div>
+                                    <button
+                                        class="toggle-btn self-start mt-3 inline-flex items-center gap-1 text-gold text-sm font-semibold hover:underline">
+                                        <span>مشاهده جزئیات</span>
+                                        <svg class="toggle-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="w-1/3 sm:w-1/4 flex-shrink-0 flex items-center p-3 sm:p-4">
+                                    <img src="images/courses-card-11-physic.png" alt="فیزیک"
+                                        class="w-full aspect-square object-cover rounded-xl" />
+                                </div>
+                            </div>
+                            <div class="details px-4 sm:px-5 pb-5">
+                                <div class="border-t border-gold/20 pt-4 mt-2">
+                                    <h5 class="text-navy font-semibold mb-3">دوره‌ها و کلاس‌های ارائه شده:</h5>
+                                    <ul class="space-y-2 text-sm text-navy/80">
+                                        <li class="border-b border-gold/10 pb-2">کلاس‌های سالیانه</li>
+                                        <li class="border-b border-gold/10 pb-2">کلاس‌های رفع اشکال مبحثی</li>
+                                        <li>کلاس‌های تقویتی</li>
+                                    </ul>
+                                    <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
+                                        <span
+                                            class="inline-block bg-cream text-navy/60 text-xs px-3 py-1 rounded-full">حضوری
+                                            / آنلاین</span>
+                                        <a href="#quick-action"
+                                            class="inline-flex items-center gap-1.5 text-gold text-xs sm:text-sm font-bold hover:underline">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                            </svg>
+                                            تماس برای رزرو
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- کارت شیمی -->
+                        <div
+                            class="course-item bg-gradient-to-b from-white to-gold/25 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 mb-6 overflow-hidden border border-gold/10">
+                            <div class="flex items-stretch">
+                                <div class="flex-1 p-4 sm:p-5 flex flex-col justify-between">
+                                    <div>
+                                        <h4 class="text-navy text-lg font-bold">شیمی</h4>
+                                        <p class="text-navy/60 text-xs mt-1">رشته‌های: ریاضی و فیزیک، علوم تجربی</p>
+                                    </div>
+                                    <button
+                                        class="toggle-btn self-start mt-3 inline-flex items-center gap-1 text-gold text-sm font-semibold hover:underline">
+                                        <span>مشاهده جزئیات</span>
+                                        <svg class="toggle-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="w-1/3 sm:w-1/4 flex-shrink-0 flex items-center p-3 sm:p-4">
+                                    <img src="images/courses-card-11-chemistry.png" alt="شیمی"
+                                        class="w-full aspect-square object-cover rounded-xl" />
+                                </div>
+                            </div>
+                            <div class="details px-4 sm:px-5 pb-5">
+                                <div class="border-t border-gold/20 pt-4 mt-2">
+                                    <h5 class="text-navy font-semibold mb-3">دوره‌ها و کلاس‌های ارائه شده:</h5>
+                                    <ul class="space-y-2 text-sm text-navy/80">
+                                        <li class="border-b border-gold/10 pb-2">کلاس‌های سالیانه</li>
+                                        <li class="border-b border-gold/10 pb-2">کلاس‌های رفع اشکال مبحثی</li>
+                                        <li>کلاس‌های تقویتی</li>
+                                    </ul>
+                                    <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
+                                        <span
+                                            class="inline-block bg-cream text-navy/60 text-xs px-3 py-1 rounded-full">حضوری
+                                            / آنلاین</span>
+                                        <a href="#quick-action"
+                                            class="inline-flex items-center gap-1.5 text-gold text-xs sm:text-sm font-bold hover:underline">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                            </svg>
+                                            تماس برای رزرو
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- کارت زیست -->
+                        <div
+                            class="course-item bg-gradient-to-b from-white to-gold/25 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 mb-6 overflow-hidden border border-gold/10">
+                            <div class="flex items-stretch">
+                                <div class="flex-1 p-4 sm:p-5 flex flex-col justify-between">
+                                    <div>
+                                        <h4 class="text-navy text-lg font-bold">زیست شناسی</h4>
+                                        <p class="text-navy/60 text-xs mt-1">رشته: علوم تجربی</p>
+                                    </div>
+                                    <button
+                                        class="toggle-btn self-start mt-3 inline-flex items-center gap-1 text-gold text-sm font-semibold hover:underline">
+                                        <span>مشاهده جزئیات</span>
+                                        <svg class="toggle-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="w-1/3 sm:w-1/4 flex-shrink-0 flex items-center p-3 sm:p-4">
+                                    <img src="images/courses-card-11-biology.png" alt="زیست"
+                                        class="w-full aspect-square object-cover rounded-xl" />
+                                </div>
+                            </div>
+                            <div class="details px-4 sm:px-5 pb-5">
+                                <div class="border-t border-gold/20 pt-4 mt-2">
+                                    <h5 class="text-navy font-semibold mb-3">دوره‌ها و کلاس‌های ارائه شده:</h5>
+                                    <ul class="space-y-2 text-sm text-navy/80">
+                                        <li class="border-b border-gold/10 pb-2">کلاس‌های سالیانه</li>
+                                        <li class="border-b border-gold/10 pb-2">کلاس‌های رفع اشکال مبحثی</li>
+                                        <li>کلاس‌های تقویتی</li>
+                                    </ul>
+                                    <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
+                                        <span
+                                            class="inline-block bg-cream text-navy/60 text-xs px-3 py-1 rounded-full">حضوری
+                                            / آنلاین</span>
+                                        <a href="#quick-action"
+                                            class="inline-flex items-center gap-1.5 text-gold text-xs sm:text-sm font-bold hover:underline">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                            </svg>
+                                            تماس برای رزرو
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== ستون چپ: معرفی پایه ===== -->
+                <div class="lg:col-span-4 lg:order-2">
+
+                    <div class="sticky-card">
+
+                        <!-- عکس -->
+                        <div class="relative mb-7">
+
+                            <!-- قاب طلایی -->
+                            <div
+                                class="absolute -bottom-4 -left-4 w-full h-full rounded-3xl border-2 border-gold/40 -z-10">
+                            </div>
+
+                            <img src="images/card-11.png" alt="پایه یازدهم"
+                                class="w-full rounded-3xl shadow-xl object-cover">
+
+                        </div>
+
+                        <!-- توضیحات -->
+                        <div class="bg-cream/75 backdrop-blur-md rounded-2xl border border-gold/20 p-6">
+
+                            <h2 class="text-2xl font-bold text-navy mb-2">
+                                پایه یازدهم
+                            </h2>
+
+                            <p class="text-sm text-navy/70 mb-3">
+                                رشته‌های ریاضی و تجربی
+                            </p>
+
+                            <p class="text-navy/80 text-sm leading-6">
+                                در پایه یازدهم، دانش‌آموزان با مباحث پایه‌ای و کلیدی دروس تخصصی و عمومی
+                                آشنا می‌شوند. ما با برگزاری دوره‌های سالیانه، کلاس‌های تقویتی عمومی
+                                و خصوصی و جلسات رفع اشکال مبحثی، بستری مناسب برای یادگیری عمیق و
+                                آمادگی برای کنکور فراهم کرده‌ایم.
+                            </p>
+
+
+
+                            <a href="courses.html"
+                                class="inline-flex items-center gap-2 mt-6 text-gold font-semibold hover:underline">
+
+                                بازگشت به دوره‌ها
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <!-- ===================== پایان محتوای اصلی ===================== -->
+
+
+    <!-- ===================== بخش اقدام سریع: رزرو کلاس ===================== -->
+    <section id="quick-action" class="w-full bg-navy relative overflow-hidden border-t border-gold/30">
+        <div class="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-gold/10 pointer-events-none"
+            aria-hidden="true"></div>
+        <div class="absolute -bottom-16 -left-16 w-64 h-64 rounded-full bg-gold/5 pointer-events-none"
+            aria-hidden="true"></div>
+        <div class="hidden sm:block absolute top-1/2 left-[8%] w-3 h-3 rounded-full bg-gold/40 pointer-events-none"
+            aria-hidden="true"></div>
+
+        <div class="relative max-w-3xl mx-auto px-4 sm:px-6 py-14 sm:py-20 text-center">
+            <span class="inline-block text-gold text-xs sm:text-sm font-bold tracking-widest mb-3">پایه یازدهم</span>
+            <h2 class="text-cream text-2xl sm:text-3xl font-bold mb-4">برای رزرو کلاس و اطلاعات بیشتر تماس بگیرید</h2>
+            <p class="text-cream/70 text-sm sm:text-base leading-7 mb-8 max-w-xl mx-auto">
+                جزئیات شهریه، زمان‌بندی کلاس‌ها و ظرفیت باقی‌مانده‌ی هر درس رو همکاران ما به‌صورت تلفنی در
+                اختیارتون قرار می‌دن.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="contact.html"
+                    class="inline-flex items-center gap-2 bg-gold text-navy px-8 py-3 rounded-full font-bold text-base hover:bg-cream transition-colors duration-200 shadow-lg w-full sm:w-auto justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    تماس برای رزرو
+                </a>
+                <a href="courses.html"
+                    class="inline-flex items-center gap-2 border-2 border-gold/40 text-cream px-8 py-3 rounded-full font-bold text-base hover:border-gold hover:text-gold transition-colors duration-200 w-full sm:w-auto justify-center">
+                    مشاهده‌ی سایر پایه‌ها
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- ===================== پایان بخش اقدام سریع ===================== -->
+
+
+    <!-- ===================== فوتر (دقیقاً مشابه بقیه صفحات) ===================== -->
+    <footer class="w-full bg-navy pt-10 sm:pt-14 pb-6">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6 text-center sm:text-right">
+
+                <div>
+                    <img src="images/logo-footer.png" alt="آموزشگاه رشدیه" loading="lazy"
+                        class="h-12 w-auto mx-auto sm:mx-0 rounded-xl mb-4" />
+                    <p class="text-cream/70 text-sm leading-6 mb-5">
+                        رشدیه؛ بیش از یک و نیم دهه همراه یادگیری دانش‌آموزان ؛ با سابقه ی یک عمر تجربه
+                    </p>
+                    <div class="flex items-center justify-center sm:justify-start gap-3">
+                        <a href="#" aria-label="اینستاگرام" class="w-9 h-9 flex items-center justify-center rounded-full bg-cream/10 hover:bg-gold
+                        text-cream hover:text-navy transition-colors duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="تلگرام" class="w-9 h-9 flex items-center justify-center rounded-full bg-cream/10 hover:bg-gold
+                        text-cream hover:text-navy transition-colors duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M21.05 3.64L2.53 10.77c-1.27.5-1.26 1.2-.23 1.51l4.76 1.48 1.85 5.62c.22.6.37.83.75.83.38 0 .55-.17.76-.38l1.83-1.78 4.83 3.56c.9.5 1.55.24 1.77-.83l3.2-15.1c.32-1.31-.5-1.9-1.02-1.66z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="flex items-center justify-center sm:justify-start gap-2 mt-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gold shrink-0" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        <a href="mailto:info@rashdiyeh.ir" dir="ltr"
+                            class="text-cream/80 text-sm hover:text-gold transition-colors duration-200">
+                            info@rashdiyeh.ir
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-gold text-base font-bold mb-4">دسترسی سریع</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="index.html"
+                                class="text-cream/80 text-sm hover:text-gold transition-colors duration-200">خانه</a>
+                        </li>
+                        <li><a href="courses.html"
+                                class="text-cream/80 text-sm hover:text-gold transition-colors duration-200">دوره‌ها</a>
+                        </li>
+                        <li><a href="about-us.html"
+                                class="text-cream/80 text-sm hover:text-gold transition-colors duration-200">درباره‌ی
+                                ما</a></li>
+                        <li><a href="contact.html"
+                                class="text-cream/80 text-sm hover:text-gold transition-colors duration-200">تماس با
+                                ما</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-gold text-base font-bold mb-4">اطلاعات تماس</h4>
+                    <ul class="space-y-2.5 text-cream/80 text-sm">
+                        <li>تهران، نازی‌آباد، میدان بازار دوم، خیابان احمد بابایی، خیابان نیکنام، کوچه کریمی، پلاک ۹
+                        </li>
+                        <li dir="ltr" class="text-right">۰۲۵-۰۰۰۰۰۰۰۰</li>
+                        <li dir="ltr" class="text-right">۰۹۱۲-۰۰۰۰۰۰۰</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-cream/10 mt-10 pt-5">
+                <p class="text-cream/50 text-xs text-center">
+                    © ۱۴۰۵ آموزشگاه رشدیه. تمامی حقوق محفوظ است.
+                </p>
+            </div>
+
+            <p class="text-cream/40 text-xs text-center" dir="ltr">
+                Designed & Developed by
+                <a href="https://github.com/YounesA-L" target="_blank"
+                    class="text-gold/70 hover:text-gold transition-colors duration-200 font-medium">Younes A.L</a>
+            </p>
+
+        </div>
+    </footer>
+    <!-- ===================== پایان فوتر ===================== -->
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
