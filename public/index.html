@@ -398,14 +398,22 @@
         <div class="hidden sm:block absolute bottom-10 right-[35%] w-16 h-16 rounded-full bg-gold/[0.06] pointer-events-none"
             aria-hidden="true"></div>
 
-        <div class="relative max-w-3xl mx-auto px-4 sm:px-6">
-            <div class="bg-navy rounded-2xl shadow-lg px-6 py-10 sm:px-12 sm:py-14 text-right">
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-stretch">
 
-                <h3 class="text-gold text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center">
-                    آموزش، رسالتی که با بازنشستگی پایان نیافت
-                </h3>
+            <div class="md:col-span-2 bg-navy rounded-2xl shadow-lg px-6 py-10 sm:px-12 sm:py-14 text-right relative overflow-hidden">
 
-                <div id="about-text-wrapper" class="relative">
+                <!-- گرادینت هاله‌ی سفید داخل کارت (مورب از بالا چپ به پایین راست) -->
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-cream/[0.28] via-transparent to-cream/[0.12] pointer-events-none">
+                </div>
+
+                <div class="relative">
+                    <h3 class="text-gold text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center">
+                        آموزش، رسالتی که با بازنشستگی پایان نیافت
+                    </h3>
+
+                    <div id="about-text-wrapper" class="relative">
                     <div class="text-cream/90 text-sm sm:text-base leading-7 space-y-3">
                         <p>
                             همه‌ی ما در زندگی، معلمی را به خاطر داریم که فقط درس نمی‌داد؛ بلکه مسیر یادگیری را برایمان
@@ -464,6 +472,28 @@
                         </svg>
                     </button>
                 </div>
+                </div>
+
+            </div>
+
+            <!-- کارت آمار (کنار کارت درباره) -->
+            <div
+                class="bg-gradient-to-b from-white to-cream/60 rounded-2xl shadow-lg shadow-navy/5 p-6 sm:p-8 flex flex-col justify-center gap-5">
+                <div class="text-center">
+                    <p class="text-gold text-3xl sm:text-4xl font-extrabold">۱۳+</p>
+                    <p class="text-navy/70 text-sm mt-1">سال تجربه</p>
+                </div>
+                <div class="w-10 h-px bg-gold/30 mx-auto"></div>
+                <div class="text-center">
+                    <p class="text-gold text-3xl sm:text-4xl font-extrabold">۵۰۰+</p>
+                    <p class="text-navy/70 text-sm mt-1">دانش‌آموز</p>
+                </div>
+                <div class="w-10 h-px bg-gold/30 mx-auto"></div>
+                <div class="text-center">
+                    <p class="text-gold text-3xl sm:text-4xl font-extrabold">۹۸٪</p>
+                    <p class="text-navy/70 text-sm mt-1">رضایت والدین</p>
+                </div>
+            </div>
 
             </div>
         </div>
