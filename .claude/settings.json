@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node public/convert-images.js)",
+      "Bash(mkdir -p /d/old-images-backup && ls public/images/*.png | wc -l)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ],
+    "additionalDirectories": [
+      "D:\\"
+    ]
+  }
+}
